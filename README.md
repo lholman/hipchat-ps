@@ -1,5 +1,5 @@
-#hipchat-PS
-AutoBot is inspired by HipChat's [hipchat-cli](https://github.com/hipchat/hipchat-cli) but wraps up the functionality to send a HipChat message in an easy to use Windows PowerShell module. 
+#hipchat-ps
+The hipchat-ps module is inspired by HipChat's [hipchat-cli](https://github.com/hipchat/hipchat-cli) but wraps up the functionality to send a HipChat message in an easy to use Windows PowerShell module. 
 
 ## Getting Started
 1. Copy this module to any location found in $env:PSModulePath
