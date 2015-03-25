@@ -23,3 +23,8 @@ The hipchat-ps module is inspired by HipChat's [hipchat-cli](https://github.com/
 
 ## Disclaimer
 NO warranty, expressed or written
+
+##Updates
+    Url for sending notifications have been updated by @phonceh
+    NO warranty, expressed or written
+    
