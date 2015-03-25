@@ -10,7 +10,10 @@ function Publish-HipChatRoomMessage{
 .NOTES
     Author: Lloyd Holman
     DateCreated: 04/09/2012
-	Requirements: Copy this module to any location found in $env:PSModulePath
+    Revision: 03/25/2015
+    Revision by: Hernan Fonseca @phonceh
+    Revision Changes: Url to post messages have changed, you must send notifications to "/v2/room/{id_or_name}/notification"
+    Requirements: Copy this module to any location found in $env:PSModulePath
 .PARAMETER apitoken
 	Required. Your HipChat API token, that you can create here https://www.hipchat.com/admin/api
 .PARAMETER roomid
@@ -93,8 +96,8 @@ function Publish-HipChatRoomMessage{
 					#Do the HTTP POST to HipChat
 					$post = "auth_token=$apitoken&room_id=$roomid&from=$from&color=$colour&message=$message&notify=$notify"
 					Write-Debug "post = $post"
-					Write-Debug "https://$apihost/v1/rooms/message"
-					$webRequest = [System.Net.WebRequest]::Create("https://$apihost/v1/rooms/message")
+					Write-Debug "https://$apihost/v2/room/$roomid/notification"
+					$webRequest = [System.Net.WebRequest]::Create("https://$apihost/v2/room/$roomid/notification")
 					$webRequest.ContentType = "application/x-www-form-urlencoded"
 					$postStr = [System.Text.Encoding]::UTF8.GetBytes($post)
 					$webrequest.ContentLength = $postStr.Length
